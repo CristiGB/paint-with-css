@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --first-color:#ddeefc;
+}
+
+body{
+    background: #54365e;
+}
+
+a{
+    text-decoration: none;
+    color: var(--first-color);
+    font-weight: 500;
+}
+
+.container_bunny{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bunny{
+    position: relative;
+    width: 14rem;
+    height: 10rem;
+    border-radius: 50%  / 60% 60% 40% 40%;
+    background-color: var(--first-color);
+    background-repeat: no-repeat;
+    background-image:linear-gradient(10deg,transparent 35%,var(--first-color) 38%,var(--first-color) 56%,transparent 56%),
+                    linear-gradient(-10deg,transparent 35%,var(--first-color) 38%,var(--first-color) 56%,transparent 56%),
+                    radial-gradient(ellipse at 50% 0,#8278c4 50%,transparent 52%),
+                    radial-gradient(ellipse at 50% 0,#8278c4 50%,transparent 52%);
+
+    background-size: 4.5rem 3rem;
+    background-position: 30% 10%,70% 10%,25% 50%, 75% 50%;
+    transition: background-position .3s;
+}
+
+.bunny:hover{
+    background-position: 30% 28%,70% 28%,25% 50%, 75% 50%;
+}
+
+
+.container_bunny .bunny::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 20rem;
+    width: 15rem;
+    bottom: 75%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-image:radial-gradient(ellipse at 50% 100%,rgb(245, 181, 187) 50%,transparent 51%),
+                    radial-gradient(ellipse at 50% 100%,rgb(245, 181, 187) 50%,transparent 51%), 
+                    radial-gradient(ellipse at 50% 100%,var(--first-color) 50%,transparent 51%),
+                    radial-gradient(ellipse at 50% 100%,var(--first-color) 50%,transparent 51%);
+    background-size: 3rem 14rem,3rem 14rem,5.5rem 18rem,5.5rem 18rem;
+    background-position: 22% 75%,70% 75%, 15% 70%,75% 70% ;
+}
+
+
+.container_bunny .bunny::after{
+    display: block;
+    content: '';
+    position: absolute;
+    height: 6rem;
+    width: 10rem;
+    top: calc(5rem + 2rem);
+    left: 2rem;
+    margin: 0 auto;
+    /* background-color: aqua; */
+    background-repeat: no-repeat;
+    background-image: radial-gradient(ellipse at 50% 50%,#7895b3  50%, transparent 54%),
+                    radial-gradient(ellipse at 40% 50%,#6a5faf 50%, transparent 54%),
+                    radial-gradient(ellipse at 60% 50%,#6a5faf 50%, transparent 54%),
+                    radial-gradient(ellipse at 10% 50%, #483d8b 50%, transparent 52%),
+                    radial-gradient(ellipse at 90% 50%, #483d8b 50%, transparent 52%),
+                    radial-gradient(ellipse at 90% 50%, #483d8b 50%, transparent 52%),
+                    radial-gradient(ellipse at 10% 50%, #483d8b 50%, transparent 52%);
+    
+    background-size: 2rem 3.5rem,2rem 3.5rem, 2rem 3.5rem, 6rem 6rem, 3rem 6rem,
+                    6rem 6rem, 3rem 6rem;
+    background-position: 50% 50%, 50% 50%, 50% 50%, 22% 75%, -20% 75%, 78% 75%, 
+                        120% 75%;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
